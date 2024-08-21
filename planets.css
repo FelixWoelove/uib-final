@@ -1,0 +1,259 @@
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: 0 0 10px white;
+  border-radius: 50%;
+  animation: twinkle 1.5s infinite ease-in-out alternate,
+    shoot 5s linear infinite;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+@keyframes shoot {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-100vw, 100vh);
+  }
+}
+.star:nth-child(1) {
+  top: 20%;
+  left: 30%;
+  animation-delay: 0s;
+}
+.star:nth-child(2) {
+  top: 50%;
+  left: 60%;
+  animation-delay: 1s;
+}
+.star:nth-child(3) {
+  top: 80%;
+  left: 40%;
+  animation-delay: 2s;
+}
+.star:nth-child(4) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 3s;
+}
+.star:nth-child(5) {
+  top: 70%;
+  left: 20%;
+  animation-delay: 4s;
+}
+.star:nth-child(6) {
+  top: 90%;
+  left: 80%;
+  animation-delay: 5s;
+}
+.star:nth-child(7) {
+  top: 40%;
+  left: 90%;
+  animation-delay: 2s;
+}
+.star:nth-child(8) {
+  top: 30%;
+  left: 70%;
+  animation-delay: 1s;
+}
+.star:nth-child(9) {
+  top: 60%;
+  left: 10%;
+  animation-delay: 3s;
+}
+.star:nth-child(10) {
+  top: 20%;
+  left: 50%;
+  animation-delay: 1s;
+}
+.star:nth-child(11) {
+  top: 4%;
+  left: 50%;
+  animation-delay: 1s;
+}
+.star:nth-child(12) {
+  top: 90%;
+  left: 30%;
+  animation-delay: 9ms;
+}
+.star:nth-child(13) {
+  top: 50%;
+  left: 70%;
+  animation-delay: 1s;
+}
+.star:nth-child(14) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 3s;
+}
+
+.saturn {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background: radial-gradient(circle at 50% 50%, #f4d4a5, #b58346, #654321);
+  border-radius: 50%;
+  box-shadow: 0 0 3rem white;
+  transform: translate(-50%, -50%);
+}
+.saturn-pic {
+  position: absolute;
+  top: -1rem;
+  left: -6.93333rem;
+
+  width: auto;
+  height: 12rem;
+  transform: rotate(25.333333deg);
+  z-index: 1000;
+}
+.saturn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 23rem;
+  height: 1rem;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(15deg);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  opacity: 50%;
+}
+
+.saturn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 23rem;
+  height: 1.6rem;
+ 
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(15deg);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  opacity: 50%;
+}
+
+.planet1,
+.moon {
+  position: absolute;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  border-width: 0.1rem 0.1rem 0 0;
+  border-radius: 50%;
+}
+
+.planet1::before,
+.moon::before,
+.planet2::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.planet1 {
+  top: -4.05rem;
+  left: 50%;
+  width: 18rem;
+  height: 18rem;
+  transform: translateX(-50%);
+  animation: orbit 500s linear infinite;
+}
+
+.planet1-pic {
+  position: absolute;
+  width: 2.5rem;
+  height: auto;
+  top: 2.5rem;
+  right: 0.4em;
+}
+.planet1::before {
+  top: 2.5rem;
+  right: 0.4em;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: aqua;
+
+  box-shadow: 0 0 3px 1px rgb(238, 239, 240),
+    inset 20px 0 15px rgb(252, 252, 252);
+
+  opacity: 20%;
+}
+
+.moon {
+  top: 1.3rem;
+  left: 91%;
+  width: 5rem;
+  height: 5rem;
+  transform: translateX(-50%);
+  animation: orbit 60s linear infinite;
+}
+
+.moon-pic {
+  position: absolute;
+  width: 1rem;
+  height: auto;
+  top: 0.1rem;
+  right: 0.1rem;
+}
+.moon::before {
+  top: 0.1rem;
+  right: 0.1rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: silver;
+  opacity: 99%;
+  box-shadow: 0 0 3px 1px rgb(238, 239, 240), inset 20px 0 15px rgb(82, 81, 81);
+}
+
+.planet2 {
+  top: -7.63333rem;
+  left: 50%;
+  width: 25rem;
+  height: 25rem;
+  transform: translateX(-50%);
+  position: absolute;
+  border-style: solid;
+  border-color: white white white transparent;
+  border-width: 0 0.1rem 0.1rem 0.1rem;
+  border-radius: 50%;
+
+  animation: orbit 800s linear infinite;
+}
+
+.planet2-pic {
+  position: absolute;
+  width: auto;
+  height: 9.5rem;
+  bottom: 0.633333rem;
+  right: 19.2rem;
+  transform: rotate(90deg);
+  z-index: 100;
+}
+
+.planet2::before {
+  bottom: 3.533333rem;
+  right: 21.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgb(176, 10, 226);
+  opacity: 20%;
+  box-shadow: 0 0 3px 1px rgb(238, 239, 240),
+    inset -20px 0 15px rgb(126, 122, 122);
+}
+
+@keyframes orbit {
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
