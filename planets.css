@@ -9,6 +9,7 @@
     shoot 5s linear infinite;
 }
 
+
 @keyframes twinkle {
   from {
     opacity: 1;
@@ -96,6 +97,7 @@
   left: 10%;
   animation-delay: 3s;
 }
+
 
 .saturn {
   position: absolute;
@@ -197,6 +199,7 @@
   height: 5rem;
   transform: translateX(-50%);
   animation: orbit 60s linear infinite;
+z-index: 1;
 }
 
 .moon-pic {
@@ -227,8 +230,9 @@
   border-color: white white white transparent;
   border-width: 0 0.1rem 0.1rem 0.1rem;
   border-radius: 50%;
+  z-index:999;
 
-  animation: orbit 800s linear infinite;
+  animation: orbit 8s linear infinite;
 }
 
 .planet2-pic {
@@ -238,11 +242,11 @@
   bottom: 0.633333rem;
   right: 19.2rem;
   transform: rotate(90deg);
-  z-index: 100;
-}
-
-.planet2::before {
-  bottom: 3.533333rem;
+z-index: 9999;
+  }
+  
+  .planet2::before {
+    bottom: 3.533333rem;
   right: 21.2rem;
   width: 2.5rem;
   height: 2.5rem;
