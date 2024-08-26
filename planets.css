@@ -316,7 +316,7 @@ z-index: 1;
   border-radius: 50%;
   z-index:999;
 
-  animation: orbit 8s linear infinite;
+  animation: orbit 800s linear infinite;
 }
 
 .planet2-pic {
