@@ -1,3 +1,10 @@
+#debug {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  border: 1px solid white;
+}
 .star {
   position: absolute;
   width: 2px;
@@ -5,8 +12,8 @@
   background: white;
   box-shadow: 0 0 10px white;
   border-radius: 50%;
-  animation: twinkle 1.5s infinite ease-in-out alternate,
-    shoot 5s linear infinite;
+  animation: twinkle 0.6s infinite ease-in-out alternate,
+    shoot 10s linear infinite;
 }
 
 .star2 {
@@ -18,7 +25,6 @@
   border-radius: 50%;
   animation: twinkle 8s infinite ease-in-out alternate;
 }
-
 
 @keyframes twinkle {
   from {
@@ -35,6 +41,170 @@
   }
   to {
     transform: translate(-100vw, 100vh);
+  }
+}
+
+
+.saturn {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background: radial-gradient(circle at 50% 50%, #f4d4a5, #b58346, #654321);
+  border-radius: 50%;
+  box-shadow: 0 0 3rem white;
+  transform: translate(-50%, -50%);
+}
+.saturn-pic {
+  position: absolute;
+  top: -1rem;
+  left: -6.93333rem;
+
+  width: auto;
+  height: 12rem;
+  transform: rotate(25.333333deg);
+  z-index: 1000;
+}
+.saturn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 23rem;
+  height: 1rem;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(15deg);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  opacity: 50%;
+}
+
+.saturn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 23rem;
+  height: 1.6rem;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(15deg);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  opacity: 50%;
+}
+
+.planet1,
+.moon {
+  position: absolute;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  border-width: 0.1rem 0.1rem 0 0;
+  border-radius: 50%;
+}
+
+.planet1::before,
+.moon::before,
+.planet2::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.planet1 {
+  top: -4.05rem;
+  left: 50%;
+  width: 18rem;
+  height: 18rem;
+  transform: translateX(-50%);
+  animation: orbit 500s linear infinite;
+}
+
+.planet1-pic {
+  position: absolute;
+  width: 2.5rem;
+  height: auto;
+  top: 2.5rem;
+  right: 0.4em;
+}
+.planet1::before {
+  top: 2.5rem;
+  right: 0.4em;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: aqua;
+
+  box-shadow: 0 0 3px 1px rgb(238, 239, 240),
+    inset 20px 0 15px rgb(252, 252, 252);
+
+  opacity: 20%;
+}
+
+.moon {
+  top: 1.3rem;
+  left: 91%;
+  width: 5rem;
+  height: 5rem;
+  transform: translateX(-50%);
+  animation: orbit 60s linear infinite;
+  z-index: 1;
+}
+
+.moon-pic {
+  position: absolute;
+  width: 1rem;
+  height: auto;
+  top: 0.1rem;
+  right: 0.1rem;
+}
+.moon::before {
+  top: 0.1rem;
+  right: 0.1rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: silver;
+  opacity: 99%;
+  box-shadow: 0 0 3px 1px rgb(238, 239, 240), inset 20px 0 15px rgb(82, 81, 81);
+}
+
+.planet2 {
+  top: -7.63333rem;
+  left: 50%;
+  width: 25rem;
+  height: 25rem;
+  transform: translateX(-50%);
+  position: absolute;
+  border-style: solid;
+  border-color: white white white transparent;
+  border-width: 0 0.1rem 0.1rem 0.1rem;
+  border-radius: 50%;
+  z-index: 999;
+
+  animation: orbit 800s linear infinite;
+}
+
+.planet2-pic {
+  position: absolute;
+  width: auto;
+  height: 9.5rem;
+  bottom: 0.633333rem;
+  right: 19.2rem;
+  transform: rotate(90deg);
+  z-index: 9999;
+}
+
+.planet2::before {
+  bottom: 3.533333rem;
+  right: 21.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgb(176, 10, 226);
+  opacity: 20%;
+  box-shadow: 0 0 3px 1px rgb(238, 239, 240),
+    inset -20px 0 15px rgb(126, 122, 122);
+}
+
+@keyframes orbit {
+  to {
+    transform: translateX(-50%) rotate(360deg);
   }
 }
 .star:nth-child(1) {
@@ -172,180 +342,10 @@
   animation-delay: 1s;
 }
 .star2:nth-child(1) {
-  
-  
   animation-delay: 1s;
 }
 
 .star2:nth-child(2) {
-  
   animation-delay: 3s;
 }
 
-
-.saturn {
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-  background: radial-gradient(circle at 50% 50%, #f4d4a5, #b58346, #654321);
-  border-radius: 50%;
-  box-shadow: 0 0 3rem white;
-  transform: translate(-50%, -50%);
-}
-.saturn-pic {
-  position: absolute;
-  top: -1rem;
-  left: -6.93333rem;
-
-  width: auto;
-  height: 12rem;
-  transform: rotate(25.333333deg);
-  z-index: 1000;
-}
-.saturn::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 23rem;
-  height: 1rem;
-
-  border-radius: 50%;
-  transform: translate(-50%, -50%) rotate(15deg);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-  opacity: 50%;
-}
-
-.saturn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 23rem;
-  height: 1.6rem;
-
-  border-radius: 50%;
-  transform: translate(-50%, -50%) rotate(15deg);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-  opacity: 50%;
-}
-
-.planet1,
-.moon {
-  position: absolute;
-  border-style: solid;
-  border-color: white transparent transparent transparent;
-  border-width: 0.1rem 0.1rem 0 0;
-  border-radius: 50%;
-}
-
-.planet1::before,
-.moon::before,
-.planet2::before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-
-.planet1 {
-  top: -4.05rem;
-  left: 50%;
-  width: 18rem;
-  height: 18rem;
-  transform: translateX(-50%);
-  animation: orbit 500s linear infinite;
-}
-
-.planet1-pic {
-  position: absolute;
-  width: 2.5rem;
-  height: auto;
-  top: 2.5rem;
-  right: 0.4em;
-}
-.planet1::before {
-  top: 2.5rem;
-  right: 0.4em;
-  width: 2.5em;
-  height: 2.5em;
-  background-color: aqua;
-
-  box-shadow: 0 0 3px 1px rgb(238, 239, 240),
-    inset 20px 0 15px rgb(252, 252, 252);
-
-  opacity: 20%;
-}
-
-.moon {
-  top: 1.3rem;
-  left: 91%;
-  width: 5rem;
-  height: 5rem;
-  transform: translateX(-50%);
-  animation: orbit 60s linear infinite;
-z-index: 1;
-}
-
-.moon-pic {
-  position: absolute;
-  width: 1rem;
-  height: auto;
-  top: 0.1rem;
-  right: 0.1rem;
-}
-.moon::before {
-  top: 0.1rem;
-  right: 0.1rem;
-  width: 1rem;
-  height: 1rem;
-  background-color: silver;
-  opacity: 99%;
-  box-shadow: 0 0 3px 1px rgb(238, 239, 240), inset 20px 0 15px rgb(82, 81, 81);
-}
-
-.planet2 {
-  top: -7.63333rem;
-  left: 50%;
-  width: 25rem;
-  height: 25rem;
-  transform: translateX(-50%);
-  position: absolute;
-  border-style: solid;
-  border-color: white white white transparent;
-  border-width: 0 0.1rem 0.1rem 0.1rem;
-  border-radius: 50%;
-  z-index:999;
-
-  animation: orbit 800s linear infinite;
-}
-
-.planet2-pic {
-  position: absolute;
-  width: auto;
-  height: 9.5rem;
-  bottom: 0.633333rem;
-  right: 19.2rem;
-  transform: rotate(90deg);
-z-index: 9999;
-  }
-  
-  .planet2::before {
-    bottom: 3.533333rem;
-  right: 21.2rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: rgb(176, 10, 226);
-  opacity: 20%;
-  box-shadow: 0 0 3px 1px rgb(238, 239, 240),
-    inset -20px 0 15px rgb(126, 122, 122);
-}
-
-@keyframes orbit {
-  to {
-    transform: translateX(-50%) rotate(360deg);
-  }
-}
-
-@media (min-width: 768px) {
-  
-}
