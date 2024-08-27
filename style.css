@@ -26,7 +26,6 @@ body {
   color: var(--text-color);
 }
 
-
 main {
   overflow-x: hidden;
 }
@@ -78,7 +77,6 @@ header {
   background: linear-gradient(to right, #422d04, #ff6b08, #eedd44, #eecfa1);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  box-shadow: ;
 }
 
 #hero {
@@ -343,9 +341,8 @@ footer img {
     height: 90%;
     max-height: 300px;
   }
-  .gallery-carousel div{
+  .gallery-carousel div {
     max-height: 350px;
-
   }
   .gallery-carousel {
     flex-direction: row;
