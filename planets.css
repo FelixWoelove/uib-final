@@ -16,7 +16,7 @@
     shoot 10s linear infinite;
 }
 
-.star2 {
+.starTwo {
   position: absolute;
   width: 2px;
   height: 2px;
@@ -44,7 +44,6 @@
   }
 }
 
-
 .saturn {
   position: absolute;
   width: 10rem;
@@ -63,6 +62,7 @@
   height: 12rem;
   transform: rotate(25.333333deg);
   z-index: 1000;
+  /* debug */
 }
 .saturn::before {
   content: "";
@@ -176,6 +176,7 @@
   border-color: white white white transparent;
   border-width: 0 0.1rem 0.1rem 0.1rem;
   border-radius: 50%;
+  /* debug */
   z-index: 999;
 
   animation: orbit 800s linear infinite;
@@ -341,11 +342,13 @@
   left: 70%;
   animation-delay: 1s;
 }
-.star2:nth-child(1) {
+.starTwo:nth-child(1) {
   animation-delay: 1s;
 }
 
-.star2:nth-child(2) {
+.starTwo:nth-child(2) {
+  top: 10%;
+  left: 40%;
+
   animation-delay: 3s;
 }
-
